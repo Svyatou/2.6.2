@@ -36,7 +36,7 @@ class Circle extends Figure{
 
     public float radius;
 
-    public Circle(float x, float y, float radius){
+   public Circle(float x, float y, float radius){
         super(x,y);
         this.radius = radius;
     }
@@ -48,6 +48,10 @@ class Circle extends Figure{
     public float getArea(){
         return (float) (Math.PI*radius*radius);
     }
+}
+interface Moveable{
+    void move(float dx, float dy);
+    void resize(float koeff);
 }
 
 public class Main {
