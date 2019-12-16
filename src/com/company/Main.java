@@ -32,7 +32,7 @@ class Rectangle extends Figure{
     }
 }
 
-class Circle extends Figure{
+class Circle extends Figure implements Moveable{
 
     public float radius;
 
@@ -47,6 +47,16 @@ class Circle extends Figure{
 
     public float getArea(){
         return (float) (Math.PI*radius*radius);
+    }
+
+    @Override
+    public void move(float dx, float dy) {
+
+    }
+
+    @Override
+    public void resize(float koeff) {
+
     }
 }
 interface Moveable{
